@@ -5,6 +5,7 @@ def draw_square():
     window.bgcolor("blue")
 
     chet = turtle.Turtle()
+    chet.shape("turtle")
     count = 0
     while (count < 4):
         chet.forward(100)
