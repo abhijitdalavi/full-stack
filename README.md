@@ -1,2 +1,4 @@
 # full-stack
-Full Stack Web Dev
+Full Stack Development
+
+My exploration and professional development into Full Stack side projects.
