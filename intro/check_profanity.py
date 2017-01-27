@@ -8,6 +8,7 @@ def read_text():
     check_profanity(contents_of_file)
 
 def check_profanity(text_to_check):
+    #link now creates pirate speech instead of checking profanity now
     connection = urllib.urlopen('http://isithackday.com/arrpi.php?text='+text_to_check)
     output = connection.read()
     print(output)
