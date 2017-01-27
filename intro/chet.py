@@ -12,9 +12,11 @@ def draw_art():
     chet = turtle.Turtle()
     chet.shape("turtle")
     chet.color("yellow")
-    chet.speed(2)
-    #Chet is gonna draw us a square
-    draw_square(chet)
+    chet.speed(5)
+    #Chet is gonna draw us a lot of squares
+    for i in range(1,36):
+        draw_square(chet)
+        chet.right(10)
     #Aerie, Chet's girlfriend, draws us a circle
     aerie = turtle.Turtle()
     aerie.shape("arrow")
