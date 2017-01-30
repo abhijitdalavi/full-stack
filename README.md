@@ -2,4 +2,7 @@
 Full Stack Development
 
 My exploration and professional development into Full Stack side projects.
-(And it all started with Chet the Turtle)
+
+intro - Python Web Dev (It all started with Chet the Turtle)
+
+responsive_design - HTML/CSS that will display properly across devices

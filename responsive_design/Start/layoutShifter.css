@@ -1,0 +1,39 @@
+/*
+  Layout Shifter gives us the most control over responsive layout through
+  using the order element. Although this does take more planning.
+*/
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .dark_blue {
+    width: 50%;
+  }
+  #container2 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .dark_blue {
+    width: 25%;
+    /* the order in which they will appear */
+    order: 1;
+  }
+  #container2 {
+    width: 50%;
+  }
+  .red {
+    width: 25%;
+    /* will appear first */
+    order: -1;
+  }
+}
