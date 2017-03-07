@@ -5,38 +5,12 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 
-# dummy json obj to return for testing
-jsonObj = {
-    "total_records": 2,
-    "data": [
-        {
-            "source__channel": "110770677",
-            "first_touch": "162.17.169.249",
-            "last_touch": "0",
-            "number_of_callers": "www.cascadebh.com",
-            "percent_total": "Cascade Behavioral Health"
-        },
-        {
-            "source__channel": "110770677",
-            "first_touch": "162.17.169.249",
-            "last_touch": "0",
-            "number_of_callers": "www.cascadebh.com",
-            "percent_total": "Cascade Behavioral Health"
-        }
-    ],
-    "records_end": 2,
-    "records_start": 1,
-    "page": 1,
-    "per_page": 2
-}
-
-
 @app.route("/")
 def main():
     # set message to return
     message = "try /getData to POST json"
-    # spits on message on load
-    return jsonify(jsonObj)
+    # spits out message on load
+    return message
 
 
 @app.route('/getData', methods=['POST'])
