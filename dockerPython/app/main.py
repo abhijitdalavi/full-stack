@@ -5,6 +5,7 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route("/")
 def main():
     # set message to return
@@ -25,9 +26,9 @@ def getData():
                 "total_records": 4,
                 "data": [
                     {
-                        "Google Organic": {
-                            "total_calls": 1000,
-                            "touches": [
+                        "name": "Google Organic",
+                        "total_calls": 1000,
+                        "touches": [
                                 {
                                     "source__channel": "Google Organic",
                                     "first_touch": "Google Organic",
@@ -35,18 +36,19 @@ def getData():
                                     "number_of_callers": 200,
                                     "percent_total": 20
                                 },
-                                {
+                            {
                                     "source__channel": "Google Organic",
                                     "first_touch": "Google Organic",
                                     "last_touch": "Content Net",
                                     "number_of_callers": 100,
                                     "percent_total": 10
                                 }
-                            ]
-                        },
-                        "Facebook Organic": {
-                            "total_calls": 200,
-                            "touches": [
+                        ]
+                    },
+                    {
+                        "name": "Facebook Organic",
+                        "total_calls": 200,
+                        "touches": [
                                 {
                                     "source__channel": "Facebook Organic",
                                     "first_touch": "Facebook Organic",
@@ -56,13 +58,12 @@ def getData():
                                 },
                                 {
                                     "source__channel": "Facebook Organic",
-                                    "first_touch": "Google Organic",
+                                    "first_touch": "Facebook Organic",
                                     "last_touch": "Content Net",
                                     "number_of_callers": 50,
                                     "percent_total": 25
                                 }
-                            ]
-                        }
+                        ]
                     }
                 ],
                 "records_end": 4,
