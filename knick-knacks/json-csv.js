@@ -110,7 +110,7 @@ function ConvertToCSV(jsonIn) {
 
         // Init counter
         ctr = 0;
-        
+
         // Iterate through each value in said object
         keys.forEach(function(key){
             if (ctr > 0) result += columnDelim;
@@ -124,4 +124,33 @@ function ConvertToCSV(jsonIn) {
 
     // Spit out what we did
     return result;
+}
+
+// Download function, because how else they gonna get it?
+function downloadCSV(stuff) {
+    
+    // We gon' need these
+    var data, filename, link;
+
+    // Call the previous func to create a csv object
+    var csv = ConvertToCSV({
+        data: dummyData
+    });
+    // If nothing comes back we can just start right here...
+    if (csv == null) return;
+
+    // Check for filename, otherwise give 'em one
+    filename = stuff.filename || 'export.csv';
+
+    // Magic that tells browser this thing is a CSV
+    if (!csv.match(/^data:text\/csv/i)) {
+        csv = 'data:text/csv;charset=utf-8,' + csv;
+    }
+    data = encodeURI(csv);
+
+    // Now we setup the HTML link element for the downloads, and lulz
+    link = document.createElement('a');
+    link.setAttribute('href', data);
+    link.setAttribute('download', filename);
+    link.click();
 }
