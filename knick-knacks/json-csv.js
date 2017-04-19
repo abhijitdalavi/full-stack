@@ -1,3 +1,4 @@
+// Just a snippet sample from YAK (channels)
 var dummyData = {
                 "total_records": 4,
                 "total_calls": 13000,
@@ -77,9 +78,11 @@ var dummyData = {
                 "per_page": 25
             };
 
+// The converter function, this is where the magic happens
 function ConvertToCSV(jsonIn) {
+
     // Variables we gon' need.
-    var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+    var result, ctr, keys, columnDelim, lineDelim, data;
     
     // Set data var to data input, otherwise nothing
     data = jsonIn.data || null;
@@ -88,9 +91,37 @@ function ConvertToCSV(jsonIn) {
         return "No Data!";
     }
 
-    columnDelimiter = jsonIn.columnDelimiter || ',';
-    lineDelimiter = jsonIn.lineDelimiter || '\n';
+    // If delimiter's exist already use those, otherwise comma and newLine, what else?
+    columnDelim = jsonIn.columnDelim || ',';
+    lineDelim = jsonIn.lineDelim || '\n';
 
+    // Grab the keys from the first object, we'll need these for header row
     keys = Object.keys(data[0]);
 
+    // Start with empty result
+    result = '';
+
+    // Add in keys from the first object to create header row
+    result += keys.join(columnDelim);
+    result += lineDelim;
+
+    // Loop through each data object
+    data.forEach(function(item) {
+
+        // Init counter
+        ctr = 0;
+        
+        // Iterate through each value in said object
+        keys.forEach(function(key){
+            if (ctr > 0) result += columnDelim;
+            result += item[key];
+            ctr++;
+        });
+
+        // New line after we finish iterating through the values of a single object
+        result += lineDelim;
+    });
+
+    // Spit out what we did
+    return result;
 }
