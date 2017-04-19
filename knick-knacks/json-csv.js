@@ -6,7 +6,7 @@
 // Just a snippet sample from YAK (channels)
 var dummyData = [
     {
-    "Datetime": "3:00",
+    "Datetime": "3:00am",
     "1st Touch": 23423,
     "Last Before Call": 7233200,
     "# of Callers": 202340,
@@ -16,7 +16,7 @@ var dummyData = [
     "% Total": 56
 },
 {
-    "Datetime": "11:00",
+    "Datetime": "11:00pm",
     "1st Touch": 3456,
     "Last Before Call": 456,
     "# of Callers": 73736,
@@ -26,7 +26,7 @@ var dummyData = [
     "% Total": 27
 },
 {
-    "Datetime": "16:00",
+    "Datetime": "16:00pm",
     "1st Touch": 8745,
     "Last Before Call": 4456,
     "# of Callers": 2756,
@@ -36,7 +36,7 @@ var dummyData = [
     "% Total": 19
 },
 {
-    "Datetime": "7:77",
+    "Datetime": "7:17am",
     "1st Touch": 9834,
     "Last Before Call": 9834,
     "# of Callers": 93847,
