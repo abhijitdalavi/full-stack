@@ -109,7 +109,4 @@ public function agent_edit() {
         if (isset($agent->id) && $agent->id) {
             unset($agents[$agent->id]);
         }
-
-        ?>
-
     }
