@@ -14,8 +14,6 @@ public function agent_edit() {
             wp_die();
         }
 
-        $zip_polygons = array();
-
         ?>
 
         <form name="agent-form" action="admin-ajax.php" method="post" id="agent-form">
