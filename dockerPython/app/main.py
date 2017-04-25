@@ -23,82 +23,175 @@ def getData():
 
         if token == 'jwcziqhurlubnm0972yg0e2y1bvxweflyfzws7mc':
             data = {
-                "total_records": 4,
-                "total_calls": 13000,
-                "total_calls_over2": 7000,
-                "total_calls_over5": 2000,
-                "data": [
-                    {
-                        "name": "Google Organic",
-                        "total_calls": 1000,
-                        "total_calls_over2": 777,
-                        "total_calls_over5": 212,
+                "start_date": "2017-03-02 00:00:00",
+                "end_date": "2017-03-02 23:59:59",
+                "label": "2 Mar",
+                "time_frame": "daily",
+                "data": {
+                    "Google Organic": {
+                        "total_calls": 922,
                         "touches": [
-                                {
-                                    "source__channel": "Google Organic",
-                                    "first_touch": "Google Organic",
-                                    "last_touch": "Psych Today",
-                                    "number_of_callers": 215,
-                                    "talk_time": 777,
-                                    "percent_total": 27,
-                                    "calls_over2": 77,
-                                    "talk_time_over2": 154,
-                                    "calls_over5": 22,
-                                    "talk_time_over5": 110
-                                },
                             {
-                                    "source__channel": "Google Organic",
-                                    "first_touch": "Google Organic",
-                                    "last_touch": "Content Net",
-                                    "number_of_callers": 109,
-                                    "talk_time": 777,
-                                    "percent_total": 13,
-                                    "calls_over2": 63,
-                                    "talk_time_over2": 126,
-                                    "calls_over5": 17,
-                                    "talk_time_over5": 85
-                                }
+                                "first_touch": "Google Organic",
+                                "last_touch": "Google Organic",
+                                "talk_time": 219540,
+                                "talk_time_over2": 205022,
+                                "talk_time_over5": 164968,
+                                "calls_over2": 432,
+                                "calls_over5": 228,
+                                "number_of_callers": 648,
+                                "percent_total": 70.281995661605
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "direct",
+                                "talk_time": 33556,
+                                "talk_time_over2": 30606,
+                                "talk_time_over5": 20656,
+                                "calls_over2": 82,
+                                "calls_over5": 34,
+                                "number_of_callers": 120,
+                                "percent_total": 13.015184381779
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "google ppc- content network",
+                                "talk_time": 22376,
+                                "talk_time_over2": 21458,
+                                "talk_time_over5": 17710,
+                                "calls_over2": 34,
+                                "calls_over5": 16,
+                                "number_of_callers": 48,
+                                "percent_total": 5.2060737527115
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "Bing Organic",
+                                "talk_time": 9610,
+                                "talk_time_over2": 8540,
+                                "talk_time_over5": 6494,
+                                "calls_over2": 26,
+                                "calls_over5": 14,
+                                "number_of_callers": 40,
+                                "percent_total": 4.3383947939262
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "Facebook CPC",
+                                "talk_time": 7780,
+                                "talk_time_over2": 7440,
+                                "talk_time_over5": 6012,
+                                "calls_over2": 16,
+                                "calls_over5": 10,
+                                "number_of_callers": 20,
+                                "percent_total": 2.1691973969631
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "yahoo - organic",
+                                "talk_time": 2592,
+                                "talk_time_over2": 2344,
+                                "talk_time_over5": 1956,
+                                "calls_over2": 6,
+                                "calls_over5": 4,
+                                "number_of_callers": 12,
+                                "percent_total": 1.3015184381779
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "other - referring",
+                                "talk_time": 3698,
+                                "talk_time_over2": 3698,
+                                "talk_time_over5": 3446,
+                                "calls_over2": 10,
+                                "calls_over5": 8,
+                                "number_of_callers": 10,
+                                "percent_total": 1.0845986984816
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "bing ppc- content network",
+                                "talk_time": 1338,
+                                "talk_time_over2": 1338,
+                                "talk_time_over5": 0,
+                                "calls_over2": 6,
+                                "calls_over5": 0,
+                                "number_of_callers": 6,
+                                "percent_total": 0.65075921908894
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "acadia corp sites",
+                                "talk_time": 1134,
+                                "talk_time_over2": 1134,
+                                "talk_time_over5": 0,
+                                "calls_over2": 6,
+                                "calls_over5": 0,
+                                "number_of_callers": 6,
+                                "percent_total": 0.65075921908894
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "google ppc- unknown",
+                                "talk_time": 224,
+                                "talk_time_over2": 0,
+                                "talk_time_over5": 0,
+                                "calls_over2": 0,
+                                "calls_over5": 0,
+                                "number_of_callers": 4,
+                                "percent_total": 0.43383947939262
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "google ppc- behavioral health ",
+                                "talk_time": 762,
+                                "talk_time_over2": 762,
+                                "talk_time_over5": 762,
+                                "calls_over2": 2,
+                                "calls_over5": 2,
+                                "number_of_callers": 2,
+                                "percent_total": 0.21691973969631
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "Psych Today Profiles",
+                                "talk_time": 238,
+                                "talk_time_over2": 0,
+                                "talk_time_over5": 0,
+                                "calls_over2": 0,
+                                "calls_over5": 0,
+                                "number_of_callers": 2,
+                                "percent_total": 0.21691973969631
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "Swoop",
+                                "talk_time": 944,
+                                "talk_time_over2": 944,
+                                "talk_time_over5": 944,
+                                "calls_over2": 2,
+                                "calls_over5": 2,
+                                "number_of_callers": 2,
+                                "percent_total": 0.21691973969631
+                            },
+                            {
+                                "first_touch": "Google Organic",
+                                "last_touch": "Healthy Place",
+                                "talk_time": 1652,
+                                "talk_time_over2": 1652,
+                                "talk_time_over5": 1652,
+                                "calls_over2": 2,
+                                "calls_over5": 2,
+                                "number_of_callers": 2,
+                                "percent_total": 0.21691973969631
+                            }
                         ],
-                        "records_end": 2,
-                        "records_start": 1,
+                        "percent_total": 100
                     },
-                    {
-                        "name": "Facebook Organic",
-                        "total_calls": 547,
-                        "total_calls_over2": 653,
-                        "total_calls_over5": 124,
-                        "touches": [
-                                {
-                                    "source__channel": "Facebook Organic",
-                                    "first_touch": "Facebook Organic",
-                                    "last_touch": "Psych Today",
-                                    "number_of_callers": 110,
-                                    "talk_time": 777,
-                                    "percent_total": 55,
-                                    "calls_over2": 53,
-                                    "talk_time_over2": 106,
-                                    "calls_over5": 12,
-                                    "talk_time_over5": 60
-                                },
-                                {
-                                    "source__channel": "Facebook Organic",
-                                    "first_touch": "Facebook Organic",
-                                    "last_touch": "Content Net",
-                                    "number_of_callers": 66,
-                                    "talk_time": 777,
-                                    "percent_total": 25,
-                                    "calls_over2": 33,
-                                    "talk_time_over2": 66,
-                                    "calls_over5": 11,
-                                    "talk_time_over5": 55
-                                }
-                        ],
-                        "records_end": 2,
-                        "records_start": 1,
-                    }
-                ],
-                "page": 1,
-                "per_page": 25
+                    "total_calls": 922
+                },
+                "last_updated": "2017-04-25 13:41:07",
+                "cached": false
             }
             # if the token matches return the json object
             return jsonify(data)
