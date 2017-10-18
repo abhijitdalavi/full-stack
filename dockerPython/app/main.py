@@ -1,15 +1,14 @@
-import os
-from flask import Flask, jsonify, session, render_template, request, Response
+from flask import Flask, jsonify, request, Response
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/")
+@app.route('/')
 def main():
     # set message to return
-    message = "try /getData to POST json"
+    message = 'try /getData to POST json'
     # spits out message on load
     return message
 
@@ -17,7 +16,7 @@ def main():
 @app.route('/getData', methods=['POST'])
 def getData():
     # return based on request
-    if request.method == "POST":
+    if request.method == 'POST':
         json_dict = request.get_json()
         token = json_dict['token']
 
@@ -40,7 +39,7 @@ def getData():
                                 "calls_over2": 432,
                                 "calls_over5": 228,
                                 "number_of_callers": 648,
-                                "percent_total": 70.281995661605
+                                "percent_total": 70.282
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -51,7 +50,7 @@ def getData():
                                 "calls_over2": 82,
                                 "calls_over5": 34,
                                 "number_of_callers": 120,
-                                "percent_total": 13.015184381779
+                                "percent_total": 13.015184
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -62,7 +61,7 @@ def getData():
                                 "calls_over2": 34,
                                 "calls_over5": 16,
                                 "number_of_callers": 48,
-                                "percent_total": 5.2060737527115
+                                "percent_total": 5.2060738
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -73,7 +72,7 @@ def getData():
                                 "calls_over2": 26,
                                 "calls_over5": 14,
                                 "number_of_callers": 40,
-                                "percent_total": 4.3383947939262
+                                "percent_total": 4.3383946
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -84,7 +83,7 @@ def getData():
                                 "calls_over2": 16,
                                 "calls_over5": 10,
                                 "number_of_callers": 20,
-                                "percent_total": 2.1691973969631
+                                "percent_total": 2.1691973
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -95,7 +94,7 @@ def getData():
                                 "calls_over2": 6,
                                 "calls_over5": 4,
                                 "number_of_callers": 12,
-                                "percent_total": 1.3015184381779
+                                "percent_total": 1.3015184
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -106,7 +105,7 @@ def getData():
                                 "calls_over2": 10,
                                 "calls_over5": 8,
                                 "number_of_callers": 10,
-                                "percent_total": 1.0845986984816
+                                "percent_total": 1.0845987
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -117,7 +116,7 @@ def getData():
                                 "calls_over2": 6,
                                 "calls_over5": 0,
                                 "number_of_callers": 6,
-                                "percent_total": 0.65075921908894
+                                "percent_total": 0.6507592
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -128,7 +127,7 @@ def getData():
                                 "calls_over2": 6,
                                 "calls_over5": 0,
                                 "number_of_callers": 6,
-                                "percent_total": 0.65075921908894
+                                "percent_total": 0.6507592
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -139,7 +138,7 @@ def getData():
                                 "calls_over2": 0,
                                 "calls_over5": 0,
                                 "number_of_callers": 4,
-                                "percent_total": 0.43383947939262
+                                "percent_total": 0.43383947
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -150,7 +149,7 @@ def getData():
                                 "calls_over2": 2,
                                 "calls_over5": 2,
                                 "number_of_callers": 2,
-                                "percent_total": 0.21691973969631
+                                "percent_total": 0.21691974
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -161,7 +160,7 @@ def getData():
                                 "calls_over2": 0,
                                 "calls_over5": 0,
                                 "number_of_callers": 2,
-                                "percent_total": 0.21691973969631
+                                "percent_total": 0.21691974
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -172,7 +171,7 @@ def getData():
                                 "calls_over2": 2,
                                 "calls_over5": 2,
                                 "number_of_callers": 2,
-                                "percent_total": 0.21691973969631
+                                "percent_total": 0.21691974
                             },
                             {
                                 "first_touch": "Google Organic",
@@ -183,7 +182,7 @@ def getData():
                                 "calls_over2": 2,
                                 "calls_over5": 2,
                                 "number_of_callers": 2,
-                                "percent_total": 0.21691973969631
+                                "percent_total": 0.21691974
                             }
                         ],
                         "percent_total": 100
@@ -191,14 +190,14 @@ def getData():
                     "total_calls": 922
                 },
                 "last_updated": "2017-04-25 13:41:07",
-                "cached": false
+                "cached": "false"
             }
             # if the token matches return the json object
             return jsonify(data)
 
     else:
-        return "GET/POST NOT WORKING"
+        return 'GET/POST NOT WORKING'
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=80)
